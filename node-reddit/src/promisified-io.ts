@@ -35,8 +35,7 @@ export function httpRequest(uri: string) {
                 reject(error);
             }
             else if (response.statusCode !== 200) {
-                response
-                reject(response.statusCode);
+                reject(response.statusMessage);
             }
             else {
                 resolve(body);
